@@ -17,7 +17,10 @@ const userSchema = new mongoose.Schema({
     password: {
         type: String,
     },
-    posts: [],
+    posts: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Post"
+    }],
     dp: {
         type: String,
     },
